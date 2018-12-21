@@ -1,0 +1,19 @@
+package com.vidhyac.interfaces;
+
+import com.vidhyac.pojo.User;
+
+public interface IUserDAO {
+	
+	/*private int userId;
+	private String userName;
+	private String password;
+	private String emailId;
+	private long mobileNo;*/
+	
+	public User getUser(int userId);
+	public User getAllUsers();
+	public void addUser(int userId,String userName,String password,String emailId,long mobileNo);
+	
+	
+	
+}

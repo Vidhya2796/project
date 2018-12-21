@@ -1,0 +1,30 @@
+package com.vidhyac.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class LoginController {
+
+	@RequestMapping(value = "/loginurl", method = RequestMethod.GET)
+	  public String showLogin(HttpServletRequest request, HttpServletResponse response) {
+	   // ModelAndView mav = new ModelAndView("LoginPage");//login is ur jsp file
+	    //mav.addObject("login", new Login());
+	    return "LoginPage";
+	  }
+	
+	@RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
+	  public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response) {
+		
+		
+		
+		return null;
+		
+	}
+	
+}

@@ -1,0 +1,70 @@
+package com.vidhyac.dao;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.vidhyac.interfaces.IUserDAO;
+import com.vidhyac.pojo.User;
+
+public class UserDAO implements IUserDAO{
+	
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+
+	@Override
+	public User getUser(int userId) {
+		
+		String sqlGetUser=null;
+		return null;
+	}
+
+	@Override
+	public User getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int addUser(int userId, String userName, String password, String emailId, long mobileNo) {
+		String sqlInsert=null;
+		//insert into userTable values(101,'vidhya','vid','cvs@gmail.com',87444762);
+		sqlInsert="insert into userTable1 values("+userId+",'"+userName+"','"+password+"','"+emailId+"',"+mobileNo+")";
+		return jdbcTemplate.update(sqlInsert);
+	}
+
+	@Override
+	public int remove(int userId) {
+		String sqlRemove=null;
+		//delete from userTable1 where userId=10;
+		sqlRemove="delete from userTable1 where userId="+userId;
+		return jdbcTemplate.update(sqlRemove);
+	}
+
+	@Override
+	public User update(int userId) {
+		
+		
+		return null;
+	}
+
+	
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("springjdbc.xml");
+		UserDAO dao=context.getBean(UserDAO.class);
+		//System.out.println(dao.addUser(101,"vidhya","vid","cvs@gmail.com",87444762));
+		System.out.println(dao.remove(101));
+	}
+	
+	
+}

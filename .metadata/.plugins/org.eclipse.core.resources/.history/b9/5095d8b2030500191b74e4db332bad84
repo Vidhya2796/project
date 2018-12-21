@@ -1,0 +1,7 @@
+package com.vidhyac.interfaces;
+
+import com.vidhyac.pojo.User;
+
+public interface IUserDAO {
+	public User get(int userId);
+}

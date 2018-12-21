@@ -1,0 +1,11 @@
+package com.vidhyac.dao;
+
+import com.vidhyac.interfaces.IUserDAO;
+
+public class UserDAO implements IUserDAO{
+
+	
+	
+	
+	
+}

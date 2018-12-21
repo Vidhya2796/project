@@ -1,0 +1,7 @@
+package com.vidhyac.controller;
+
+
+@Controller
+public class LoginController {
+
+}

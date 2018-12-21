@@ -1,0 +1,7 @@
+package com.vidhyac.service;
+
+
+@Component
+public class LoginService {
+
+}

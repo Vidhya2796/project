@@ -1,0 +1,5 @@
+package com.vidhyac.dao;
+
+public class LoginDAO {
+
+}

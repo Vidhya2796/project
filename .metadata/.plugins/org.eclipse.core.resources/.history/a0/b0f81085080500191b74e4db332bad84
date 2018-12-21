@@ -1,0 +1,66 @@
+package com.vidhyac.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.vidhyac.interfaces.IUserDAO;
+import com.vidhyac.pojo.User;
+
+public class UserDAO implements IUserDAO{
+	
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	
+	/*public void createTable(){
+		String createStmt="create table empVidhya(empId number(20))";
+		jdbcTemplate.execute(createStmt);
+	}*/
+	
+	@Override
+	public User getUser(int userId) {
+		
+		
+		return null;
+	}
+
+	@Override
+	public User getAllUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addUser(int userId, String userName, String password, String emailId, long mobileNo) {
+		String sql;
+		//insert into userTable values(101,'vidhya','vid','cvs@gmail.com',87444762);
+		sql="insert into userTable values("+userId+",'"+userName+"',"+password+"','"+emailId+","+mobileNo+")";
+		return false;
+	}
+
+	@Override
+	public void remove(int userId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User update(int userId) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
+
+	
+	
+	
+	
+}

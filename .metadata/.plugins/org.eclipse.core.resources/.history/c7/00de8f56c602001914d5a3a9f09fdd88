@@ -1,0 +1,34 @@
+package com.vidhyac.pojo;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+
+
+/*public class UserMapper implements RowCallbackHandler {
+
+	@Override
+	public void processRow(ResultSet rs) throws SQLException {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+*/
+
+public class UserMapper implements RowMapper<User> {
+	   public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+		   User user = new User();
+		 
+		  /* user.setId(rs.getInt("id"));
+	      student.setName(rs.getString("name"));
+	      student.setAge(rs.getInt("age"));*/
+	      
+	      
+	   
+	      
+	      return user;
+	   }
+	}

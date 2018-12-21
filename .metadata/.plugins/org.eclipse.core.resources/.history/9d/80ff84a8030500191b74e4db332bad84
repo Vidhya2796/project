@@ -1,0 +1,5 @@
+package com.vidhyac.interfaces;
+
+public interface IUserDAO {
+
+}

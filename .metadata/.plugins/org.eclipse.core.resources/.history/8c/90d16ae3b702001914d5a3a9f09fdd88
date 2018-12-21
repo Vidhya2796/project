@@ -1,0 +1,13 @@
+package com.vidhyac.service;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class LoginService {
+
+	LoginDAO dao;
+	public boolean isValidUser(String user,String pass) {
+		return true;
+		
+	}
+}
